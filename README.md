@@ -36,5 +36,34 @@ git clone https://github.com/ERFANFATHi-E/SS2D_All_Requirements_Installer
 ./MakeInstall
 ```
 
+## :arrow_forward: Using the Server
+
+To start only the server either type `./rcssserver` from the directory
+containing the executable or `rcssserver` if you installed the executables
+in your PATH.
+```bash
+rcssserver
+```
+rcssserver will look in your home directory for the configuration files:
+
+- ~/.rcssserver/server.conf
+- ~/.rcssserver/player.conf
+- ~/.rcssserver/CSVSaver.conf
+- ~/.rcssserver-landmark.xml  (optional)
+
+If these files do not exist they will be created and populated with default values.
+
+To start the sample client, type `./rcssclient` or `rcssclient` as above.  Then type
+`(init sample)`.  This will connect the sample client to the server.  You can then
+type in client command to move the client around the field. You will also need a
+monitor to be able to see whats happening on the field.
+
+If you installed the server and the monitor successfully, you can use the
+`rcsoccersim` script. To start the simulator (server and monitor) either type:
+
+```bash
+rcsoccersim
+```
+
 # Any problems
 fathye897@gmail.com
