@@ -9,3 +9,6 @@ Shell Script for installing all of the SS2D requirements on Wsl/Ubuntu
 ```
 ./MakeInstall
 ```
+
+# Any problems
+fathye897@gmail.com
