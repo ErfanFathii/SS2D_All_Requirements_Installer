@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo su 
 
 sudo apt update
 sudo apt install build-essential libboost-all-dev autoconf automake libtool doxygen graphviz g++ python-dev autotools-dev libicu-dev libbz2-dev flex bison qt5-default libfontconfig1-dev libaudio-dev libxt-dev libglib2.0-dev libxi-dev libxrender-dev python3 python3-pip python3-setuptools python3-numpy python3-matplotlib
@@ -16,6 +17,7 @@ git clone https://github.com/helios-base/fedit2
 git clone https://github.com/Farzin-Negahbani/Namira-LogAnalyzer
 
 cd librcsc
+chmod 777 *
 ./bootstrap
 ./configure
 make
@@ -24,6 +26,7 @@ sudo ldconfig
 cd ..
 
 cd rcssserver
+chmod 777 *
 ./bootstrap
 ./configure
 make
@@ -32,6 +35,7 @@ sudo ldconfig
 cd ..
 
 cd rcssmonitor
+chmod 777 *
 ./bootstrap
 ./configure
 make
@@ -40,6 +44,7 @@ sudo ldconfig
 cd ..
 
 cd soccerwindow2
+chmod 777 *
 ./bootstrap
 ./configure
 make
@@ -48,6 +53,7 @@ sudo ldconfig
 cd ..
 
 cd fedit2
+chmod 777 *
 ./bootstrap
 ./configure
 make
@@ -56,6 +62,7 @@ sudo ldconfig
 cd ..
 
 cd Namira-LogAnalyzer
+chmod 777 *
 sudo python3 ./setup.py install
 cd ..
 
