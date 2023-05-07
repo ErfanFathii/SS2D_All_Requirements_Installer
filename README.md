@@ -10,10 +10,17 @@ Shell Script for installing all of the SS2D requirements on Wsl/Ubuntu20.04 or l
 - Install qt5 https://wiki.qt.io/Install_Qt_5_on_Ubuntu
 # Download
 
+- QT  
+
 ```
 wget https://download.qt.io/new_archive/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
+```
+
+- File
+```
 git clone https://github.com/ERFANFATHi-E/SS2D_All_Requirements_Installer
 ```
+
 
 ## :star: Just Use!
 
