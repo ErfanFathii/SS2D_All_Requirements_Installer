@@ -8,11 +8,10 @@ Shell Script for installing all of the SS2D requirements on Wsl/Ubuntu20.04
 - The RoboCup Soccer Simulator: http://github.com/rcsoccersim/
 - RoboCup Official Homepage: http://www.robocup.org/
 - Install qt5 https://wiki.qt.io/Install_Qt_5_on_Ubuntu
-# pkgs
+# Download
 
 ```
-sudo apt update
-sudo apt install build-essential libboost-all-dev autoconf automake libtool doxygen graphviz g++ autotools-dev libicu-dev libbz2-dev flex bison libfontconfig1-dev libaudio-dev libxt-dev libglib2.0-dev libxi-dev libxrender-dev python3 python3-pip python3-setuptools python3-numpy python3-matplotlib python-dev-is-python3 python2-dev python2
+git clone https://github.com/ERFANFATHi-E/SS2D_All_Requirements_Installer
 ```
 
 ## :star: Just Use!
