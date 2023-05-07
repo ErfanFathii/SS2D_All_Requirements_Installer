@@ -15,7 +15,12 @@ Shell Script for installing all of the SS2D requirements on Wsl/Ubuntu20.04 or l
 ```
 wget https://download.qt.io/new_archive/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
 ```
-
+```
+chmod +x qt-opensource-linux-x64-5.7.0.run ./qt-opensource-linux-x64-5.7.0.run
+```
+```
+sudo apt-get install build-essential mesa-common-dev libfontconfig1 libglu1-mesa-dev -y
+```
 - File
 ```
 git clone https://github.com/ERFANFATHi-E/SS2D_All_Requirements_Installer
