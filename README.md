@@ -31,7 +31,7 @@ git clone https://github.com/ERFANFATHi-E/SS2D_All_Requirements_Installer
 
 ## :star: Just Use!
 
- If you are using ubuntu20.04 :
+ If you are using ubuntu20.04 run the following command and ignore Qt installation method. :
  
 ```
 sudo apt install qt5-default
