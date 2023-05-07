@@ -29,7 +29,9 @@ git clone https://github.com/ERFANFATHi-E/SS2D_All_Requirements_Installer
 
 
 ## :star: Just Use!
-
+ 
+ Run as administrator 
+ 
 ```
 ./MakeInstall
 ```
