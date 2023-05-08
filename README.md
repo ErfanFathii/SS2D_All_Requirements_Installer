@@ -41,7 +41,13 @@ git clone https://github.com/ERFANFATHi-E/SS2D_All_Requirements_Installer
 ```
 sudo apt install qt5-default
 ```
- Run as administrator 
+- Recommended commands for ubuntu 22.04 :
+
+```
+sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake
+```
+
+Run as administrator 
  
 ```
 ./MakeInstall
