@@ -20,13 +20,7 @@ make -j12
 sudo make install
 sudo ldconfig
 cd ..
-cd /etc/
-sudo echo "/usr/local/lib" | cat >>  ld.so.conf
-sudo echo "/usr/local/share" | cat >>  ld.so.conf
-sudo echo "/src/.libs" | cat >>  ld.so.conf
 
-cd
-cd  SS2D_All_Requirements_Installer/SS2D
 cd rcssserver
 chmod 777 *
 ./bootstrap
@@ -35,8 +29,12 @@ make -j12
 sudo make install
 sudo ldconfig
 cd ..
+cd /etc/
+sudo echo "/usr/local/lib" | cat >>  ld.so.conf
+sudo echo "/usr/local/share" | cat >>  ld.so.conf
+sudo echo "/src/.libs" | cat >>  ld.so.conf
 
-
+cd ~/SS2D_All_Requirements_Installer/SS2D
 
 cd soccerwindow2
 chmod 777 *
