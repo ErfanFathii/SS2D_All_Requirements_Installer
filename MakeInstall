@@ -10,12 +10,9 @@ mkdir SS2D
 
 cd SS2D
 
-git clone https://github.com/rcsoccersim/rcssmonitor
 git clone https://github.com/rcsoccersim/rcssserver
 git clone https://github.com/helios-base/soccerwindow2
 git clone https://github.com/helios-base/librcsc
-git clone https://github.com/helios-base/fedit2
-git clone https://github.com/Farzin-Negahbani/Namira-LogAnalyzer
 
 cd librcsc
 chmod 777 *
@@ -25,7 +22,13 @@ make
 sudo make install
 sudo ldconfig
 cd ..
+cd /etc/
+sudo echo "/usr/local/lib" | cat >>  ld.so.conf
+sudo echo "/usr/local/share" | cat >>  ld.so.conf
+sudo echo "/src/.libs" | cat >>  ld.so.conf
 
+cd
+cd SS2D
 cd rcssserver
 chmod 777 *
 ./bootstrap
@@ -35,14 +38,7 @@ sudo make install
 sudo ldconfig
 cd ..
 
-cd rcssmonitor
-chmod 777 *
-./bootstrap
-./configure
-make
-sudo make install
-sudo ldconfig
-cd ..
+
 
 cd soccerwindow2
 chmod 777 *
@@ -52,18 +48,3 @@ make
 sudo make install
 sudo ldconfig
 cd ..
-
-cd fedit2
-chmod 777 *
-./bootstrap
-./configure
-make
-sudo make install
-sudo ldconfig
-cd ..
-
-cd Namira-LogAnalyzer
-chmod 777 *
-sudo python3 ./setup.py install
-cd ..
-
