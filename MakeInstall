@@ -4,6 +4,7 @@ sudo apt update
 sudo apt upgrade
 sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake build-essential libboost-all-dev autoconf automake libtool doxygen graphviz g++ autotools-dev libicu-dev libbz2-dev flex bison libfontconfig1-dev libaudio-dev libxt-dev libglib2.0-dev libxi-dev libxrender-dev python3 python3-pip python3-setuptools python3-numpy python3-matplotlib python-dev-is-python3 
 
+rm SS2D -rf
 mkdir SS2D
 
 cd SS2D
@@ -16,7 +17,7 @@ cd librcsc
 chmod 777 *
 ./bootstrap
 ./configure
-make
+make -j12
 sudo make install
 sudo ldconfig
 cd ..
@@ -31,7 +32,7 @@ cd rcssserver
 chmod 777 *
 ./bootstrap
 ./configure
-make
+make -j12
 sudo make install
 sudo ldconfig
 cd ..
