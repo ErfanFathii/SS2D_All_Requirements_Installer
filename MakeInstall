@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+sudo echo "nameserver 8.8.8.8" | cat > /etc/resolv.conf
 
 sudo apt update
 sudo apt upgrade
