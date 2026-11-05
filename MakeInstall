@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt update
 sudo apt upgrade
-sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake build-essential libboost-all-dev autoconf automake libtool doxygen graphviz g++ autotools-dev libicu-dev libbz2-dev flex bison libfontconfig1-dev libaudio-dev libxt-dev libglib2.0-dev libxi-dev libxrender-dev python3 python3-pip python3-setuptools python3-numpy python3-matplotlib python-dev-is-python3 
+sudo apt install -y qtbase5-dev qt5-qmake cmake build-essential libboost-all-dev autoconf automake libtool doxygen graphviz g++ autotools-dev libicu-dev libbz2-dev flex bison libfontconfig1-dev libaudio-dev libxt-dev libglib2.0-dev libxi-dev libxrender-dev python3 python3-pip python3-setuptools python3-numpy
 
 rm SS2D -rf
 mkdir SS2D
@@ -11,12 +11,13 @@ cd SS2D
 git clone https://github.com/rcsoccersim/rcssserver
 git clone https://github.com/helios-base/soccerwindow2
 git clone https://github.com/helios-base/librcsc
+git clone https://github.com/rcsoccersim/rcssmonitor
 
 cd librcsc
 chmod 777 *
 ./bootstrap
 ./configure
-make -j12
+make -j$(nproc)
 sudo make install
 sudo ldconfig
 cd ..
@@ -25,7 +26,7 @@ cd rcssserver
 chmod 777 *
 ./bootstrap
 ./configure
-make -j12
+make -j$(nproc)
 sudo make install
 sudo ldconfig
 cd ..
@@ -41,7 +42,14 @@ cd soccerwindow2
 chmod 777 *
 ./bootstrap
 ./configure
-make
+make -j$(nproc)
 sudo make install
 sudo ldconfig
 cd ..
+
+cd rcssmonitor
+chmod 777 *
+./bootstrap
+./configure
+make -j$(nproc)
+sudo make install
